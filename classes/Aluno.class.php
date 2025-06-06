@@ -7,6 +7,13 @@ class Aluno{
     private $periodo;
     private $pdo;
 
+
+  public function __construct()
+  {
+    echo "construtor chamado";
+  }
+
+
     //getter and setters - modificadores de acesso
 
     public function getRa(){
@@ -43,22 +50,7 @@ class Aluno{
     }
 
 
-    public function __construct(){
-        /*a classe pdo foi criada para auxiliar a interacao com databases*/
-    
-        $dns = "mysql:dbname=usuarioetimpwii;host=localhost";
-        $user = "root";
-        $pass = "";
 
-        try{
-            $this->pdo = new PDO($dns,$user,$pass);
-            return true;
-        }catch(\Throwable $th){
-            return false;
-        }
-
-        
-    }
 
 
 }

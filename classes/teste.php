@@ -1,3 +1,4 @@
 <?php
-require 'conexao.php';
-conectarBanco();
+require 'classes/Aluno.class.php';
+
+$aluno = new Aluno();
